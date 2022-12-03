@@ -26,19 +26,16 @@ int main()
         switch (hands[2])
         {
         case 'X':
-            if(hands[0] == 'A') score += 4; //Rock + Rock
-            else if(hands[0] == 'B') score += 1; //Rock + Paper
-            else score += 7; //Rock + Scissors
+        // you have to choose X to draw
+            score += 1;
             break;
         case 'Y':
-            if(hands[0] == 'A') score += 8; //Paper + Rock
-            else if(hands[0] == 'B') score += 5; //Paper + Paper
-            else score += 2; //Paper + Scissors
+        //you have to choose X to lose
+            score += 5;
             break;
         case 'Z':
-            if(hands[0] == 'A') score += 3; //Scissors + Rock
-            else if(hands[0] == 'B') score += 9; //Scissors + Paper
-            else score += 6; //Scissors + Scissors            
+        // You have to choose X to win
+            score += 9;
             break;
         default:
             break;
